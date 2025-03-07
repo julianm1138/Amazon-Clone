@@ -1,9 +1,9 @@
-import { useStateValue } from "../globalState/useStatevalue";
+import { useStateValue } from "../globalState/useStateValue";
 
 export default function Product({ id, title, image, price, rating }) {
-  const [{ basket }, dispatch] = useStateValue();
+  const [state, dispatch] = useStateValue();
   const addToBasket = () => {
-    console.log(basket);
+    console.log(state);
     dispatch({
       type: "ADD_TO_BASKET",
       item: {

@@ -15,13 +15,13 @@ export default function Home() {
         <Product
           title="SENSARTE Nonstick Skillet, Deep Frying Pan 10/11/12-inch, Saute Pan with Lid, Stay-cool Handle, Healthy Stone Cookware Cookin
 SENSARTE Nonstick Skillet, Deep Frying Pan 10/11/12-inch, Saute Pan with Lid, Stay-cool"
-          price={"39.99"}
+          price={39.99}
           image="src\assets\panpic.jpg"
           rating={3}
         />
         <Product
           title="Apple AirPods Pro 2 Wireless Earbuds, Active Noise Cancellation, Hearing Aid Feature, Bluetooth Headphones, Transparency, Personalized Spatial Audio, High-Fidelity Sound, H2 Chip, USB-C Charging"
-          price={"199" + "." + "00"}
+          price={199.0}
           image="src\assets\airpods.jpg"
           rating={5}
         />
@@ -29,19 +29,19 @@ SENSARTE Nonstick Skillet, Deep Frying Pan 10/11/12-inch, Saute Pan with Lid, St
       <div className="home__rowTwo flex">
         <Product
           title="Amazon Basics High Density Foam Roller for Exercise and Recovery"
-          price={"18.99"}
+          price={18.99}
           image="src\assets\foamroller.jpg"
           rating={5}
         />
         <Product
           title="Owala Kids FreeSip Insulated Stainless Steel Water Bottle with Straw for Sports, Travel, and School, BPA-Free Sports Water Bottle, 16 oz, All The Berries"
-          price={"24.99"}
+          price={24.99}
           image="src\assets\waterbottle.jpg"
           rating={5}
         />
         <Product
           title="Amazon Basics Neoprene Dumbbell Hand"
-          price={"19.99"}
+          price={19.99}
           image="src\assets\dumbbells.jg.jpg"
           rating={5}
         />
@@ -49,7 +49,7 @@ SENSARTE Nonstick Skillet, Deep Frying Pan 10/11/12-inch, Saute Pan with Lid, St
       <div className="home__rowThree">
         <Product
           title="Crocs Unisex Adult Classic Clog"
-          price={"30" + "." + "00"}
+          price={30.0}
           image="src\assets\crocs.jpg"
           rating={5}
         />

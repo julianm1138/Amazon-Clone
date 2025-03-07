@@ -1,6 +1,4 @@
 import { useContext } from "react";
-import { StateContext } from "./stateProvider";
+import { StateContext } from "./StateProvider";
 
 export const useStateValue = () => useContext(StateContext);
-
-export default useStateValue;

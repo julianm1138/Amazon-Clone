@@ -1,8 +1,11 @@
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import { Link } from "react-router-dom";
+import { useStateValue } from "../globalState/useStateValue";
 
 export default function Header() {
+  const [{ basket }, dispatch] = useStateValue();
+  console.log(dispatch);
   return (
     <div className="header flex justify-between items-center top-0 bg-black ">
       <Link to="/">
@@ -55,7 +58,7 @@ export default function Header() {
             <ShoppingBasketIcon />
 
             <span className="header__optionLineTwo header__basketCount font-bold mx-2">
-              0
+              {basket?.length}
             </span>
           </div>
         </Link>
