@@ -1,24 +1,31 @@
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
     <div className="header flex justify-between items-center top-0 bg-black ">
-      <img
-        className="header__logo w-[90px] object-contain"
-        src="src\assets\amazon-logo.webp"
-        aria-label="amazon logo"
-      />
+      <Link to="/">
+        <img
+          className="header__logo w-[90px] object-contain hover:border border-solid border-white"
+          src="src\assets\amazon-logo.webp"
+          alt="amazon logo"
+        />
+      </Link>
 
       <div className="header__search flex flex-1 items-center px-5">
-        <input className="header__searchIn w-full h-[32px]" type="text" />
+        <input
+          className="header__searchIn w-full h-[39px] pl-2 rounded-l-sm"
+          type="text"
+          placeholder="Search Amazon"
+        />
         <SearchIcon
-          sx={{ fontSize: 32 }}
-          className="w-[100px] p-1 bg-[#cd9042]"
+          sx={{ fontSize: 30, width: 45, height: 39 }}
+          className=" bg-[#febc67] rounded-r-sm p-1.5 hover:bg-[#febd67d3] cursor-pointer"
         />
       </div>
 
-      <div className="header__nav text-white flex justify-evenly gap-3">
+      <div className="header__nav text-white flex justify-evenly items-center gap-3 ">
         <div className="header__option flex flex-col">
           <span className="header__optionLineOne text-[10px] font-light">
             Hello Guest
@@ -43,14 +50,15 @@ export default function Header() {
             Prime
           </span>
         </div>
+        <Link to="/checkout">
+          <div className="header__optionBasket flex items-center px-2 hover:border border-solid border-white p-3">
+            <ShoppingBasketIcon />
 
-        <div className="header__optionBasket flex items-center px-2">
-          <ShoppingBasketIcon />
-
-          <span className="header__optionLineTwo header__basketCount font-bold mx-2">
-            0
-          </span>
-        </div>
+            <span className="header__optionLineTwo header__basketCount font-bold mx-2">
+              0
+            </span>
+          </div>
+        </Link>
       </div>
     </div>
   );

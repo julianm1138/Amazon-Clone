@@ -7,7 +7,7 @@ export default function Home() {
         <img
           className="home__image w-full z-0 mb-10 gradient-mask-b-0"
           src="src\assets\aprimebanner.jpg"
-          aria-label="amazon prime banner"
+          alt="amazon prime banner"
         />
       </div>
 
@@ -40,7 +40,7 @@ SENSARTE Nonstick Skillet, Deep Frying Pan 10/11/12-inch, Saute Pan with Lid, St
           rating={5}
         />
         <Product
-          title="Amazon Basics Neoprene Dumbbell Hand Weights"
+          title="Amazon Basics Neoprene Dumbbell Hand"
           price={"19.99"}
           image="src\assets\dumbbells.jg.jpg"
           rating={5}
