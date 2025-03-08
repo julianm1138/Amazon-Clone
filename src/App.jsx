@@ -1,4 +1,5 @@
 import "./App.css";
+import Login from "./Components/Login";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
 import Checkout from "./Components/Checkout";
@@ -8,6 +9,7 @@ function App() {
     <Router>
       <div className="app">
         <Routes>
+          <Route path="/login" element={<Login />} />
           <Route
             path="/checkout"
             element={

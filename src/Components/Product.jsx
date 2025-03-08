@@ -32,15 +32,15 @@ export default function Product({ id, title, image, price, rating }) {
         </div>
       </div>
       <img
-        className="max-h-[120px] w-[100%] object-contain mb-3"
+        className="max-h-[120px] object-contain mb-3"
         src={image}
-        aria-label="picture of a pan"
+        alt="product image"
       />
       <button
         onClick={addToBasket}
         className="bg-[#f0c14b] border border-[#a88734] px-2 mt-3 text-xs text-black"
       >
-        Add to Basket
+        Add to Cart
       </button>
     </div>
   );

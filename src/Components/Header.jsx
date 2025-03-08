@@ -29,14 +29,16 @@ export default function Header() {
       </div>
 
       <div className="header__nav text-white flex justify-evenly items-center gap-3 ">
-        <div className="header__option flex flex-col">
-          <span className="header__optionLineOne text-[10px] font-light">
-            Hello Guest
-          </span>
-          <span className="header__optionLineTwo text-[13px] font-black">
-            Sign in
-          </span>
-        </div>
+        <Link to="/login">
+          <div className="header__option flex flex-col">
+            <span className="header__optionLineOne text-[10px] font-light">
+              Hello Guest
+            </span>
+            <span className="header__optionLineTwo text-[13px] font-black">
+              Sign in
+            </span>
+          </div>
+        </Link>
         <div className="header__option flex flex-col">
           <span className="header__optionLineOne text-[10px] font-light">
             Returns
