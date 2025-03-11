@@ -28,7 +28,7 @@ export default function Header() {
         />
       </div>
 
-      <div className="header__nav text-white flex justify-evenly items-center gap-3 ">
+      <div className="header__nav text-white text-sm/[15px] flex justify-evenly items-center gap-3 ">
         <Link to="/login">
           <div className="header__option flex flex-col">
             <span className="header__optionLineOne text-[10px] font-light">
