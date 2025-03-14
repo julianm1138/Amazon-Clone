@@ -1,5 +1,4 @@
 import { useStateValue } from "../globalState/useStateValue";
-
 export default function CheckoutProduct({ id, image, title, price, rating }) {
   const [{ basket }, dispatch] = useStateValue();
   const removeFromBasket = () => {

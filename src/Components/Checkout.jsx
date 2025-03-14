@@ -1,6 +1,7 @@
 import Subtotal from "./Subtotal";
 import CheckoutProduct from "./CheckoutProduct";
 import { useStateValue } from "../globalState/useStateValue";
+import FlipMove from "react-flip-move";
 
 export default function Checkout() {
   const [{ basket }, dispatch] = useStateValue();
@@ -16,6 +17,7 @@ export default function Checkout() {
         <h2 className="checkout__title ml-5 mr-5 mb-10 text-2xl font-black border-b-[2px]">
           Your shopping cart
         </h2>
+
         {basket.map((item) => (
           <CheckoutProduct
             key={item.id}
@@ -27,6 +29,7 @@ export default function Checkout() {
           />
         ))}
       </div>
+
       <div className="checkout__right mt-5 font-black">
         <Subtotal />
       </div>

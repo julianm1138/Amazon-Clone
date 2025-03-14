@@ -2,9 +2,38 @@ import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../globalState/useStateValue";
+import { useEffect } from "react";
+import { auth, signOut } from "../server/firebase";
 
 export default function Header() {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
+
+  const logout = async () => {
+    try {
+      await signOut(auth);
+      console.log("User logged out");
+    } catch (error) {
+      console.error("Logout Error:", error.message);
+    }
+  };
+
+  useEffect(() => {
+    auth.onAuthStateChanged((authUser) => {
+      console.log("user is:", authUser);
+      if (authUser) {
+        dispatch({
+          type: "SET_USER",
+          user: authUser,
+        });
+      } else {
+        dispatch({
+          type: "SET_USER",
+          user: null,
+        });
+      }
+    });
+  }, [dispatch]);
+
   console.log(dispatch);
   return (
     <div className="header flex justify-between items-center top-0 bg-black ">
@@ -31,12 +60,16 @@ export default function Header() {
       <div className="header__nav text-white text-sm/[15px] flex justify-evenly items-center gap-3 ">
         <Link to="/login">
           <div className="header__option flex flex-col">
-            <span className="header__optionLineOne text-[10px] font-light">
-              Hello Guest
-            </span>
-            <span className="header__optionLineTwo text-[13px] font-black">
-              Sign in
-            </span>
+            <Link to="/">
+              <span className="header__optionLineOne text-[10px] font-light">
+                {user ? `Hello, ${user.email}` : "Hello Guest"}
+              </span>
+            </Link>
+            <Link to="login">
+              <span className="header__optionLineTwo text-[13px] font-black">
+                {user ? "Sign Out" : "Sign In"}
+              </span>
+            </Link>
           </div>
         </Link>
         <div className="header__option flex flex-col">
