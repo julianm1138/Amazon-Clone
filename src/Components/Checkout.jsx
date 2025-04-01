@@ -4,7 +4,7 @@ import { useStateValue } from "../globalState/useStateValue";
 import FlipMove from "react-flip-move";
 
 export default function Checkout() {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
   return (
     <div className="checkout flex h-full bg-white pb-10">
       <div className="checkout__left w-[75%] h-full">
@@ -13,6 +13,7 @@ export default function Checkout() {
           src="src\assets\amazonadbanner2.jpg"
           alt="amazon basics ad"
         />
+        <h3 className="text-bold">Hello, {user?.email}!</h3>
 
         <h2 className="checkout__title ml-5 mr-5 mb-10 text-2xl font-black border-b-[2px]">
           Your shopping cart

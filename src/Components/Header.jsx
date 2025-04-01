@@ -3,14 +3,14 @@ import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../globalState/useStateValue";
 import { useEffect } from "react";
-import { auth, signOut } from "../server/firebase";
+import { auth } from "../server/firebase";
 
 export default function Header() {
   const [{ basket, user }, dispatch] = useStateValue();
 
   const logout = async () => {
     try {
-      await signOut(auth);
+      if (user) await auth.signOut();
       console.log("User logged out");
     } catch (error) {
       console.error("Logout Error:", error.message);
