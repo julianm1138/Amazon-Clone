@@ -40,7 +40,7 @@ export default function Header() {
       <Link to="/">
         <img
           className="header__logo w-[90px] object-contain hover:border border-solid border-white"
-          src="public\assets\amazon-logo.webp"
+          src="/assets/amazon-logo.webp"
           alt="amazon logo"
         />
       </Link>
