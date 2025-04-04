@@ -37,7 +37,7 @@ export default function Login() {
       <Link to="/">
         <img
           className="login__logo object-contain my-10 mx-auto w-40"
-          src="src/assets/amazon-logo-transparent.png"
+          src="public/assets/amazon-logo-transparent.png"
           alt="amazon logo"
         />
       </Link>

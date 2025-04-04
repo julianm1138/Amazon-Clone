@@ -10,7 +10,7 @@ export default function Checkout() {
       <div className="checkout__left w-[75%] h-full">
         <img
           className="static w-[80%] mb-[10px]"
-          src="src\assets\amazonadbanner2.jpg"
+          src="public\assets\amazonadbanner2.jpg"
           alt="amazon basics ad"
         />
         <h3 className="text-bold">Hello, {user?.email}!</h3>
